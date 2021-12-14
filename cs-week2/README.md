@@ -112,12 +112,12 @@ Exemplo 1:
 
 Exemplo 2:
 
-    Entrada de Dados:
+  - Entrada de Dados:
 
-Digite um número inteiro: 2
+**Digite um número inteiro: 2**
 
-    Saída de Dados:
+  - Saída de Dados:
 
-O dígito das dezenas é 0
+**O dígito das dezenas é 0**
 
-Dica: O operador "//" faz uma divisão inteira jogando fora o resto, ou seja, aquilo que é menor que o divisor. O operador "%" devolve apenas o resto da divisão inteira jogando fora o resultado, ou seja, tudo que é maior ou igual ao divisor.
+**Dica**: O operador "//" faz uma divisão inteira jogando fora o resto, ou seja, aquilo que é menor que o divisor. O operador "%" devolve apenas o resto da divisão inteira jogando fora o resultado, ou seja, tudo que é maior ou igual ao divisor.
