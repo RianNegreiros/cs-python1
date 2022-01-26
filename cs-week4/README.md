@@ -38,3 +38,35 @@ Digite um número inteiro: 123
 ```
 
 **Dica**: Para separar os dígitos, lembre-se: o operador "//" faz uma divisão inteira jogando fora o resto, ou seja, aquilo que é menor que o divisor; O operador "%" devolve apenas o resto da divisão inteira jogando fora o resultado, ou seja, tudo que é maior ou igual ao divisor.
+
+# Exercício Opcional 1
+
+Escreva um programa que receba um número inteiro positivo na entrada e verifique se é primo. Se o número for primo, imprima "primo". Caso contrário, imprima "não primo".
+
+Exemplos:
+
+```bash
+Digite um número inteiro: 13
+primo
+```
+
+```bash
+Digite um número inteiro: 12
+não primo
+```
+
+# Exercício 2 - Desafio do vídeo "Repetição com while"
+Escreva um programa que receba um número inteiro na entrada e verifique se o número recebido possui ao menos um dígito com um dígito adjacente igual a ele. Caso exista, imprima "sim"; se não existir, imprima "não".
+
+Exemplos:
+
+```bash
+Digite um número inteiro: 12345
+não
+```
+
+```bash
+Digite um número inteiro: 1011
+sim
+```
+
