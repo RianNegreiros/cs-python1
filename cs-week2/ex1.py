@@ -1,6 +1,6 @@
-x = input("Digite o valor correspondente ao lado de um quadrado:")
+x = int(input("Digite o valor correspondente ao lado de um quadrado: "))
 
-a = int(x)*int(x)
-p = int(x)+int(x)+int(x)+int(x)
+a = x * x
+p = x * 4
 
 print("perímetro:", p, "-", "área:", a)

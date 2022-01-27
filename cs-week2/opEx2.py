@@ -1,14 +1,15 @@
 import math
-s = input("Por favor, entre com o número de segundos que deseja converter:")
 
-days = math.floor(int(s)/86400)
-d = math.floor(int(s)%86400)
+s = int(input("Por favor, entre com o número de segundos que deseja converter:"))
 
-hours = math.floor(int(d)/3600)
-h = math.floor(int(d)%3600)
+days = math.floor(s / 86400)
+d = math.floor(s % 86400)
 
-minutes = math.floor(int(h)/60)
+hours = math.floor(d / 3600)
+h = math.floor(d % 3600)
 
-seconds = int(s) - (minutes + hours * 60 + days * 24 * 60) * 60
+minutes = math.floor(h / 60)
+
+seconds = s - (minutes + hours * 60 + days * 24 * 60) * 60
 
 print(days, "dias,", hours, "horas,", minutes, "minutos e", seconds, "segundos.")

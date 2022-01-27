@@ -1,8 +1,8 @@
-a = input("Digite a primeira nota:")
-b = input("Digite a segunda nota:")
-c = input("Digite a terceira nota:")
-d = input("Digite a quarta nota:")
+a = int(input("Digite a primeira nota:"))
+b = int(input("Digite a segunda nota:"))
+c = int(input("Digite a terceira nota:"))
+d = int(input("Digite a quarta nota:"))
 
-me = (int(a)+int(b)+int(c)+int(d))/4
+me = (a + b + c + d) / 4
 
 print("A média aritmética é", me)

@@ -1,5 +1,5 @@
-n = input("Digite um número:")
-if int(n)%5 == 0:
-  print("Buzz")
+n = int(input("Digite um número:"))
+if n % 5 == 0:
+    print("Buzz")
 else:
-  print(n)
+    print(n)

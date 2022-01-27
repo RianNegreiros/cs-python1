@@ -1,105 +1,98 @@
-def computador_escolhe_jogada(n, m):
-    computadorRemove = 1
+def machine_choose_play(n, m):
+    machine_remove = 1
 
-    while computadorRemove != m:
-        if (n - computadorRemove) % (m+1) == 0:
-            return computadorRemove
-
-        else:
-            computadorRemove += 1
-
-    return computadorRemove
-
-
-def usuario_escolhe_jogada(n, m):
-    jogadaValida = False
-
-    while not jogadaValida:
-        jogadorRemove = int(input('Quantas peças você vai tirar? '))
-        if jogadorRemove > m or jogadorRemove < 1:
-            print()
-            print('Oops! Jogada inválida! Tente de novo.')
-            print()
+    while machine_remove != m:
+        if (n - machine_remove) % (m + 1) == 0:
+            return machine_remove
 
         else:
-            jogadaValida = True
+            machine_remove += 1
 
-    return jogadorRemove
+    return machine_remove
 
 
-def campeonato():
-    nRodada = 1
-    while nRodada <= 3:
+def user_choose_play(n, m):
+    valid_play = False
+
+    while not valid_play:
+        player_remove = int(input('How many pieces will you remove ? '))
+
+        if player_remove > m or player_remove < 1:
+            print('\nOops! Invalid play! Try again.', end='\n')
+        else:
+            valid_play = True
+
+    return valid_play
+
+
+def championship():
+    n_round = 1
+    while n_round <= 3:
         print()
-        print('**** Rodada', nRodada, '****')
-        print()
-        partida()
-        nRodada += 1
+        print('\n**** Round', n_round, '****', end='\n')
+        match()
+        n_round += 1
     print()
-    print('Placar: Você 0 X 3 Computador')
+    print('Score: You 0 X 3 Machine')
 
 
-def partida():
-    n = int(input('Quantas peças? '))
+def match():
+    n = int(input('How many pieces ? '))
 
-    m = int(input('Limite de peças por jogada? '))
+    m = int(input('Limit of pieces per turn ? '))
 
-    vezDoPC = False
+    machine_turn = False
 
-    if n % (m+1) == 0:
-        print()
-        print('Voce começa!')
+    if n % (m + 1) == 0:
+        print('\nYou start!')
 
     else:
-        print()
-        print('Computador começa!')
-        vezDoPC = True
+        print('\nThe machine start!')
+        machine_turn = True
 
     while n > 0:
-        if vezDoPC:
-            computadorRemove = computador_escolhe_jogada(n, m)
-            n = n - computadorRemove
-            if computadorRemove == 1:
-                print()
-                print('O computador tirou uma peça')
+        if machine_turn:
+            machine_remove = machine_choose_play(n, m)
+            n = n - machine_remove
+            if machine_remove == 1:
+                print('\nThe machine removed')
             else:
-                print()
-                print('O computador tirou', computadorRemove, 'peças')
+                print('\nThe machine removed', machine_remove, 'pieces')
 
-            vezDoPC = False
+            machine_turn = False
         else:
-            jogadorRemove = usuario_escolhe_jogada(n, m)
-            n = n - jogadorRemove
-            if jogadorRemove == 1:
+            user_remove = user_choose_play(n, m)
+            n = n - user_remove
+            if user_remove == 1:
                 print()
-                print('Você tirou uma peça')
+                print('You removed one piece')
             else:
                 print()
-                print('Você tirou', jogadorRemove, 'peças')
-            vezDoPC = True
+                print('You removed', user_remove, 'pieces')
+            machine_turn = True
         if n == 1:
-            print('Agora resta apenas uma peça no tabuleiro.')
+            print('Now remain one piece on the board', end="\n")
             print()
         else:
             if n != 0:
-                print('Agora restam,', n, 'peças no tabuleiro.')
-                print()
+                print('Now remain,', n, 'pieces on the board.', end="\n")
 
-    print('Fim do jogo! O computador ganhou!')
+    print('Game Over! The machine won')
 
-print('Bem-vindo ao jogo do NIM! Escolha:')
+
+print('Welcome to NIM game. Choose:')
 print()
 
-print('1 - para jogar uma partida isolada')
+print('1 - to play an isolated game')
 
-tipoDePartida = int(input('2 - para jogar um campeonato '))
+match_type = int(input('2 - to play championship '))
 
-if tipoDePartida == 2:
+if match_type == 2:
     print()
-    print('Voce escolheu um campeonato!')
+    print('You choose championship!')
     print()
-    campeonato()
+    championship()
 else:
-    if tipoDePartida == 1:
+    if match_type == 1:
         print()
-        partida()
+        match()

@@ -1,5 +1,5 @@
-n = input("Digite um número:")
-if int(n)%2 == 0:
-  print("par")
+n = int(input("Digite um número:"))
+if n % 2 == 0:
+    print("par")
 else:
-  print("ímpar")
+    print("ímpar")
