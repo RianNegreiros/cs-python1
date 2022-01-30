@@ -21,9 +21,9 @@ def e_hipotenusa(n):
 
 
 def soma_hipotenusas(n):
-    arr = []
+    j = 0
     for i in range(1, n + 1):
         if e_hipotenusa(i):
-            print(i)
-            arr.append(i)
-    return sum(arr)
+            j = j + i
+    return j
+
